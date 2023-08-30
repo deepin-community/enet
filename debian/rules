@@ -1,4 +1,40 @@
 #!/usr/bin/make -f
 
+CFLAGS += -W -Wall -fPIC
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+bindnow
+
 %:
 	dh $@
+
+VERSION := 1.3.17
+get-orig-source:
+	wget --no-clobber -O enet-$(VERSION).tar.gz http://enet.bespin.org/download/enet-$(VERSION).tar.gz
+	mkdir enet-$(VERSION)+ds
+	tar --strip-components=1 -C enet-$(VERSION)+ds -xzf enet-$(VERSION).tar.gz
+	set -e; cd enet-$(VERSION)+ds; \
+		rm -f enet.lib enet64.lib; \
+		rm -rf docs/html; \
+		rm -rf Makefile.in aclocal.m4 compile config.guess config.sub configure depcomp install-sh ltmain.sh m4 missing; \
+		chmod -x enet.dsp docs/*.dox
+	tar -cJf enet_$(VERSION)+ds.orig.tar.xz enet-$(VERSION)+ds
+	rm -rf enet-$(VERSION)+ds
+
+override_dh_auto_build:
+	dh_auto_build
+	doxygen
+
+override_dh_clean:
+	[ ! -d docs/html ] || rm -r docs/html/
+	dh_clean
+
+override_dh_autoreconf:
+	mkdir -p m4
+	dh_autoreconf
+
+override_dh_auto_configure:
+	dh_auto_configure -- --disable-static
+
+override_dh_install:
+	find debian/tmp -name '*.la' -delete
+	dh_install

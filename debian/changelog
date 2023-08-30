@@ -1,5 +1,271 @@
-template-repository (1.0-1) unstable; urgency=medium
+enet (1.3.17+ds-2) unstable; urgency=medium
 
-  * Initial release
+  * Team upload.
+  * Upload to unstable.
+  * Declare compliance with Debian Policy 4.6.2.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Markus Koschany <apo@debian.org>  Sun, 08 Jan 2023 23:20:12 +0100
+
+enet (1.3.17+ds-1) experimental; urgency=medium
+
+  * Team upload.
+
+  [ Reiner Herrmann ]
+  * Fix watch file (Closes: #1020607)
+
+  [ Fukui Daichi ]
+  * New upstream version 1.3.17+ds (Closes: #1020606)
+  * debian/rules: Update version for get-orig-source target.
+  * Switch to compat level 13.
+  * Add Rules-Requires-Root field
+  * debian/copyright: Update years of copyright and contributors
+  * Add a new symbol and Build-Depends-Package field
+  * 0001-ftbfs-on-hurd-i386.patch: update metadata
+  * debian/rules: add hardening
+  * debian/rules: do not build .a and .la files
+  * Fix watch file
+  * Bumped Standards-Version to 4.6.1
+
+ -- Fukui Daichi <a.dog.will.talk@akane.waseda.jp>  Tue, 15 Nov 2022 14:09:44 +0100
+
+enet (1.3.13+ds-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 1.3.13+ds. (Closes: #841765)
+  * wrap-and-sort -sa.
+  * Declare compliance with Debian Policy 4.1.4.
+  * Update VCS fields.
+  * Switch to compat level 11.
+  * Drop libenet7-dbg package in favor of -dbgsym package.
+  * d/copyright: Use copyright format 1.0.
+  * Remove source/options file because xz compression is the default now.
+  * Rebase ftbfs-on-hurd-i386 patch.
+
+ -- Markus Koschany <apo@debian.org>  Wed, 09 May 2018 10:37:05 +0200
+
+enet (1.3.12+ds-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sun, 25 May 2014 20:29:56 +0200
+
+enet (1.3.12+ds-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Rename shared library package due to soname change from libenet2a
+    to libenet7.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Thu, 24 Apr 2014 22:34:44 +0200
+
+enet (1.3.11+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Fri, 27 Dec 2013 15:17:44 +0100
+
+enet (1.3.10+ds-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols and shlibs files.
+  * debian/control: Use canonical URI for Vcs-* fields.
+  * Bumped Standards-Version to 3.9.5 (no changes).
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Mon, 16 Dec 2013 23:31:27 +0100
+
+enet (1.3.9+ds-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update symbols and shlibs files.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Mon, 30 Sep 2013 23:03:53 +0200
+
+enet (1.3.8+ds-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Thu, 13 Jun 2013 23:02:19 +0200
+
+enet (1.3.8+ds-1) experimental; urgency=low
+
+  * New upstream release.
+  * Add shlibs and symbols files for libenet2a.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Tue, 04 Jun 2013 22:59:04 +0200
+
+enet (1.3.7+ds-2) experimental; urgency=low
+
+  * debian/rules: override dh_autoreconf to create m4 directory. Creating the
+    directory in the build target would require changing the build-arch and
+    build-indep targets as well.
+  * Add Multi-Arch fields for all binary packages.
+  * Bumped Standards-Version to 3.9.4 (no changes).
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sat, 25 May 2013 17:20:21 +0200
+
+enet (1.3.7+ds-1) experimental; urgency=low
+
+  * New upstream release. (Closes: #685937)
+  * Change binary package names for new soname (libenet2a).
+  * Add get-orig-source target to remove precompiled Windows libraries.
+    While at it, also remove other generated files.
+  * debian/libenet-doc.docs: design.txt was removed upstream. No longer
+    try to install it.
+  * debian/copyright: Update years of copyright.
+  * Use dh-autoreconf.
+  * debian/rules: Create m4 directory in build target.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sat, 18 May 2013 16:58:52 +0200
+
+enet (1.3.3-2) unstable; urgency=low
+
+  * Apply patch from Samuel Thibault <sthibault@debian.org> to allow enet to
+    build on hurd-i386. (Closes: #638385)
+    + new patch: ftbfs-on-hurd-i386.diff
+  * Use xz compression for source and binary packages.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Fri, 19 Aug 2011 20:49:50 +0200
+
+enet (1.3.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright: Update years of copyright.
+  * Bump Standards-Version to 3.9.2 (no changes).
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Tue, 28 Jun 2011 20:36:01 +0200
+
+enet (1.3.1-3) unstable; urgency=low
+
+  * Build for multiarch.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Thu, 23 Jun 2011 23:18:36 +0200
+
+enet (1.3.1-2) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sat, 12 Mar 2011 17:35:42 +0100
+
+enet (1.3.1-1) experimental; urgency=low
+
+  * New upstream release. (Closes: #585782)
+  * Change binary package names for new soname.
+  * Remove transitional libenet1-dev package.
+  * Use upstream's pkg-config file instead of our own.
+  * No longer install tutorial.txt: removed upstream.
+  * Remove patch kfreebsd.diff: applied upstream.
+  * Use source format 3.0 (quilt).
+  * debian/watch: Do not call uupdate.
+  * debian/copyright: Update years of copyright.
+  * Update my email address.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sat, 05 Mar 2011 17:16:28 +0100
+
+enet (1.2.1-1) unstable; urgency=low
+
+  * New upstream release.
+    + change soname to `libenet.so.0debian1', rename packages accordingly.
+    + refresh patch.
+  * debian/copyright: Update years of copyright.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Wed, 30 Dec 2009 15:50:48 +0900
+
+enet (1.2-4) unstable; urgency=low
+
+  * debian/control: Move libenet2-dbg to section `debug'
+  * debian/control: Add ${misc:Depends}
+  * libenet-dev: Make dependency on libenet2 versioned
+  * debian/enet.pc: Remove -I${includedir}/enet from Cflags
+    (Closes: #519982)
+  * use debhelper's override feature
+  * add header to patch kfreebsd.diff
+  * debian/control: remove duplicate field Section from binary package
+    defintion
+  * bump Standards-Version to 3.8.3
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sun, 06 Sep 2009 13:29:45 +0200
+
+enet (1.2-3) unstable; urgency=low
+
+  * Upload to unstable.
+
+ -- Clint Adams <schizo@debian.org>  Sun, 01 Mar 2009 14:28:27 -0500
+
+enet (1.2-2) experimental; urgency=low
+
+  * Make libenet-dev depend on libenet2.
+
+ -- Clint Adams <schizo@debian.org>  Sat, 17 Jan 2009 15:19:50 -0500
+
+enet (1.2-1) experimental; urgency=low
+
+  [ Jon Dowland ]
+  * add Homepage: control field to source stanza
+
+  [ Ansgar Burchardt ]
+  * New upstream release
+    + bump SONAME of shared library
+    + update version in enet.pc
+  * Switch to debhelper 7
+  * bump Standards Version to 3.8.0
+    + Added debian/README.source
+    + Remove Homepage semi-field from description
+  * debian/copyright: Switch to proposed machine-readable format
+  * debian/control: Change Vcs-* fields to Git
+  * debian/control: Add myself to Uploaders
+  * Make libenet1-dev a transitional package for libenet-dev instead of the
+    other way around.  We only want to support the latest version.
+  * Change description for libenet2 and libenet-dev
+  * Add libenet-doc package for documentation, also generate said
+    documentation with doxygen
+  * Add libenet2-dbg with debugging symbols
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Wed, 27 Aug 2008 00:43:58 +0200
+
+enet (1.1-2) unstable; urgency=low
+
+  * add kfreebsd.diff (Closes: #414348)
+   - add a builddep on quilt
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sun, 16 Sep 2007 23:12:07 +0200
+
+enet (1.1-1) unstable; urgency=low
+
+  * New upstream release (Closes: #414348)
+  * update the homesite url in descriptions (Closes: #432202)
+  * do not ignore make clean return anymore
+  * update the copyright file
+  * add a watchfile
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Wed, 11 Jul 2007 08:10:45 +0000
+
+enet (1.0-4) unstable; urgency=low
+
+  * upload in unstable
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sun, 13 May 2007 23:43:02 +0200
+
+enet (1.0-3) experimental; urgency=low
+
+  * create a shared lib to respect Debian policy
+   - add libenet1.links libenet1-dev.links
+   - calls dh_makeshlibs
+  * provide libenet1 and libenet1-dev. Keeps libenet-dev as dummy package for
+    the transition
+  * add a pkg-config file (Closes: #387581)
+  * add a XS-Vcs-Svn: entry in the control file
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sat, 24 Mar 2007 18:55:29 +0100
+
+enet (1.0-2) unstable; urgency=medium
+
+  * remove cdbs. please see http://wiki.debian.org/Games/ToolsDiscuss
+  * libenet-dev FIX: install missing file callbacks.h (Closes: #385740)
+  * provide libenet-dev only since it's not a shared library
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Fri, 18 Aug 2006 19:44:26 +0200
+
+enet (1.0-1) unstable; urgency=low
+
+  * Initial Release (Closes: #375429)
+
+ -- Gonéri Le Bouder <goneri@rulezlan.org>  Sat, 24 Jun 2006 12:40:54 +0200
