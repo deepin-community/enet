@@ -5,7 +5,7 @@ Comment:
  prebuilt documentation or binary files.
 
 Files: *
-Copyright: 2002-2020, Lee Salzman
+Copyright: 2002-2024, Lee Salzman
 License: other
 
 Files: debian/*
@@ -14,7 +14,7 @@ Copyright:
  2008-2014, Ansgar Burchardt <ansgar@debian.org>
  2009 Clint Adams <schizo@debian.org>
  2016 Phil Morrell <debian@emorrp1.name>
- 2018 Markus Koschany <apo@debian.org>
+ 2018, 2023 Markus Koschany <apo@debian.org>
  2020 Reiner Herrmann <reiner@reiner-h.de>
  2022 Fukui Daichi <a.dog.will.talk@akane.waseda.jp>
 License: other
